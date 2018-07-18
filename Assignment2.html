@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the buttons to sort Phone objects on the basis of Year.</p>
+
+<button onclick="myFunction()">Sort</button>
+
+<p id="demo"></p>
+
+<script>
+var phones = [
+{year:2016,type:"Nokia 3"},
+{ year:2001,type:"Nokia 5"},
+{ year:2018,type:"Nokia 8"},
+{ year:2007,type:"Nokia 7"},
+{ year:2000,type:"Nokia 6"},
+{ year:2005,type:"Nokia 2"},
+{ year:2009,type:"Nokia 6.1"}]
+
+
+ displayPhones();
+
+function myFunction() {
+    phones.sort(function(a, b){return a.year - b.year});
+    displayPhones();
+}
+
+function displayPhones() {
+  document.getElementById("demo").innerHTML =
+  phones[0].year + " " + phones[0].type + "<br>" +
+  phones[1].year + " " + phones[1].type + "<br>" +
+  phones[2].year + " " + phones[2].type + "<br>" +
+  phones[3].year + " " + phones[3].type + "<br>" +
+  phones[4].year + " " + phones[4].type + "<br>" +
+  phones[5].year + " " + phones[5].type + "<br>" +
+  phones[6].year + " " + phones[6].type ;
+}
+</script>
+
+</center>
+</body>
+</html>
