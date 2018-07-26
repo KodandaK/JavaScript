@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html><center>
+<h2> Printing the URL details </h2>
+<body>
+<p id="demo">  </p>
+
+<script>
+//document.getElementById("demo").innerHTML =window.location.pathname;
+
+var parser=document.createElement('a');
+
+parser.href="https://www.w3schools.com:3030/js/js_window/?KKlocation#example";
+
+document.write("Host :"+parser.host);
+document.write("</br> Hostname :"+parser.hostname);
+document.write("</br> Protocol : "+parser.protocol);
+document.write("</br> Port : "+parser.port);
+document.write("</br> Hash : "+parser.hash);
+document.write("</br> search :"+parser.search);
+document.write("</br> Pathname : "+parser.pathname);
+
+</script>
+</body>
+</center>
+</html>
+
+
+
+
+ 
+
+
+
+ 
