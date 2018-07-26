@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<center>
+
+<head> 
+<style type="text/css"> 
+body {margin: 30px;} 
+</style>  
+<title>Countitems and display of a dropdown list</title> 
+</head>
+<body>
+<p id="demo"> </p>
+<form>
+<h2> Selecting dropdown list </h2>
+<select id="colorSelect"> 
+<option>Red</option> 
+<option>Green</option> 
+<option>White</option> 
+<option>Black</option>
+<option>Yellow</option>
+<option>Blue</option>
+<option>Sky blue</option>
+</select> 
+<input type="button" onclick="printOverWindow()" value="Count and Print Over Window"> 
+</form>
+</body>
+
+<script>
+function printOverWindow()
+{
+var x=document.getElementById("colorSelect").length;
+alert("No of items are :  "+x);
+alert("Red \n Green \n White \n Black \n Yellow \n Blue \n Sky blue");
+}
+
+</script>
+
+</center>
+</html>
