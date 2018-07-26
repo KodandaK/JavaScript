@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ 
+<title>RollOver and RollOut Images</title>
+
+<script>
+        function MouseRollover1() {
+		 document.getElementById("demo1").src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\kk2.jpg";
+    }
+        function MouseOut1() {
+               document.getElementById("demo1").src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\kk1.jpg";
+    }
+
+	    
+			
+			function MouseRollover2() {
+         document.getElementById("demo2").src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\kk3.jpg";
+    }
+        function MouseOut2() {
+           document.getElementById("demo2").src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\kk4.jpg";
+    }
+
+
+	        function MouseRollover3() {
+         document.getElementById("demo3").src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\rajesh.jpg";
+    }
+        function MouseOut3() {
+            document.getElementById("demo3").src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\rk.jpg";
+    }
+
+ </script>
+
+ 
+ <body>
+ 
+<!--The rollover image displays here.-->
+<img src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\kk1.jpg"  width="450" height="500" 
+onmouseover="MouseRollover1()" 
+onmouseout="MouseOut1()" id="demo1"/>
+
+<img src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\kk3.jpg"  width="450" height="500" 
+onmouseover="MouseRollover2()" 
+onmouseout="MouseOut2()" id="demo2"/>
+
+<img src="C:\Users\Kodanda\Desktop\ASSESMENTS\JavaScript\rk.jpg"  width="400" height="500" 
+onmouseover="MouseRollover3()" 
+onmouseout="MouseOut3()" id="demo3"/>
+ 
+
+</body>
+</html>
