@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<center>
+<h1>Sorting by using 2 tehnique</h1>
+
+<p id='sort'></p>
+
+
+ <script>
+
+ //Code for BUBLE SORT
+ function swap(arr, first_Index, second_Index){
+    var temp = arr[first_Index];
+    arr[first_Index] = arr[second_Index];
+    arr[second_Index] = temp;
+}
+
+function bubble_Sort(arr){
+
+    var len = arr.length,
+        i, j, stop;
+
+    for (i=0; i < len; i++){
+        for (j=0, stop=len-i; j < stop; j++){
+            if (arr[j] > arr[j+1]){
+                swap(arr, j, j+1);
+            }
+        }
+    }
+
+    return arr;
+}
+// document.write() is only used for testing purpose
+document.write("<h2>1.Buble Sort </h2>")
+document.write("Before sorting   :   10, 7, 2, 90, -9, 5,23 <br>");
+document.write("After  sorting  : " +bubble_Sort([10, 7, 2, 90, -9, 5,23]) +"</br>"); 
+
+
+//Code for QUICK SORT
+
+function quickSort(arr, left, right){
+   var len = arr.length, 
+   pivot,
+   partitionIndex;
+
+
+  if(left < right){
+    pivot = right;
+    partitionIndex = partition(arr, pivot, left, right);
+    
+   //sort left and right
+   quickSort(arr, left, partitionIndex - 1);
+   quickSort(arr, partitionIndex + 1, right);
+  }
+  return arr;
+}
+
+
+function partition(arr, pivot, left, right){
+   var pivotValue = arr[pivot],
+       partitionIndex = left;
+
+   for(var i = left; i < right; i++){
+    if(arr[i] < pivotValue){
+      swap(arr, i, partitionIndex);
+      partitionIndex++;
+    }
+  }
+  swap(arr, right, partitionIndex);
+  return partitionIndex;
+}
+
+
+
+function swap(arr, i, j){
+   var temp = arr[i];
+   arr[i] = arr[j];
+   arr[j] = temp;
+}
+    
+
+document.write("<h2> 2.Quick Sort</h2>");
+document.write("Before Sorting :  56,78,3,-89,6,12,-7 </br> "); 
+document.write("After Sorting   : " + quickSort([56,78,3,-89,6,12,-7],0,6)); 
+
+</script>
+
+</center>
+</html>
