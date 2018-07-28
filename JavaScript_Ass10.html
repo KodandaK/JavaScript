@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<HTML>
+<center>
+<body>
+<h2> Printing an elements of an Array</h2>
+
+Select how many elements do you want from an array</br>
+<input id="numb"> </input></br>
+
+<button  type="button" onclick="printElement()"> Submit </button>
+
+<p id="demo"></p>
+</body>
+<script>
+
+ function printElement(){
+
+ var x,array,dupArray,i;
+ dupArray=[];
+	// Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+array =["Intigrity","Enhancement","Code","Debug","Develop","Test","Deploy"];
+
+if(x==array.length)
+document.getElementById("demo").innerHTML="The "+array.length+" elemennts are : </br>" +array;
+else if(x>array.length)
+document.getElementById("demo").innerHTML="Required elements are not available in an array. The maximum elements are :</br>" +array;
+
+else if(x<array.length){
+
+for(i=(array.length-x);i<array.length;i++){
+dupArray.push(array[i]);
+}
+document.getElementById("demo").innerHTML="The last "+ x +" elements are : </br> " + dupArray;
+
+
+}
+
+}
+</script>
+</center>
+</HTML>
+
+
